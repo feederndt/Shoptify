@@ -8,12 +8,17 @@ const Product = ({ e }) => {
     <Wrapper>
       <article key={e.id}>
         <div className='container'>
-          <img src={e.image} alt={e.name} />
-          <FaSearch className='link' />
+          <Link to={`/products/${e.id}`}>
+            <img src={e.image} alt={e.name} />
+            <FaSearch className='link' />
+          </Link>
         </div>
 
         <footer>
-          <h5>{e.name}</h5>
+          <Link to={`/products/${e.id}`}>
+            <h5>{e.name}</h5>
+          </Link>
+
           <p>${e.price / 100}</p>
         </footer>
       </article>
