@@ -21,20 +21,7 @@ const initFilterState = {
   freeShip: false,
 }
 
-const initCartState = [
-  {
-    id: 'recZkNf2kwmdBcqd0',
-    price: 25999,
-    color: '#ff0000',
-    quantity: 3,
-  },
-  {
-    id: 'recEHmzvupvT8ZONH',
-    price: 25999,
-    color: '#ffb900',
-    quantity: 5,
-  },
-]
+const initCartState = []
 
 const Provider = ({ children }) => {
   const [productsState, setProductsState] = useState(products)

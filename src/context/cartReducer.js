@@ -2,11 +2,13 @@ export const cartReducer = (state, action) => {
   switch (action.type) {
     case 'INCREASE':
       return state.map((e) =>
-        e.id === action.value ? { ...e, quantity: e.quantity + 1 } : e
+        e.id === action.value.id && e.color === action.value.color
+          ? { ...e, quantity: e.quantity + 1 }
+          : e
       )
     case 'DECREASE':
       return state.map((e) =>
-        e.id === action.value
+        e.id === action.value.id && e.color === action.value.color
           ? { ...e, quantity: e.quantity === 1 ? 1 : e.quantity - 1 }
           : e
       )

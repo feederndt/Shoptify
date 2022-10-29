@@ -8,13 +8,13 @@ const CartAmountButtons = ({ item }) => {
   return (
     <Wrapper>
       <button
-        onClick={() => dispatchCart({ type: 'DECREASE', value: item.id })}
+        onClick={() => dispatchCart({ type: 'DECREASE', value: { ...item } })}
       >
         <FaMinus />
       </button>
       <h2>{item.quantity}</h2>
       <button
-        onClick={() => dispatchCart({ type: 'INCREASE', value: item.id })}
+        onClick={() => dispatchCart({ type: 'INCREASE', value: { ...item } })}
       >
         <FaPlus />
       </button>

@@ -1,15 +1,17 @@
 import React from 'react'
 import { FaShoppingCart } from 'react-icons/fa'
 import styled from 'styled-components'
+import { useGlobalContext } from '../context'
 
 const CartButtons = () => {
+  const { cartState } = useGlobalContext()
   return (
     <Wrapper>
       <div className='cart-btn'>
         <div className='cart-container'>
           <span>Cart</span>
           <FaShoppingCart />
-          <p className='cart-value'>0</p>
+          <p className='cart-value'>{cartState.length}</p>
         </div>
       </div>
     </Wrapper>
