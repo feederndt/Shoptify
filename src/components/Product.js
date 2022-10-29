@@ -15,7 +15,7 @@ const Product = ({ e }) => {
         </div>
 
         <footer>
-          <Link to={`/products/${e.id}`}>
+          <Link to={`/products/${e.id}`} style={{ color: 'var(--clr-black)' }}>
             <h5>{e.name}</h5>
           </Link>
 
